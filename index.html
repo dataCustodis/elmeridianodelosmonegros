@@ -230,44 +230,19 @@
             <p class="fs-5 text-uppercase text-primary">Rutas Literarias</p>
             <h1 class="display-3">Únete a la Aventura</h1>
             
-            <!-- Video insertado con enfoque alternativo -->
-            <div class="mt-4 mb-5 position-relative">
-                <!-- Capa 1: El video en sí mismo con múltiples formatos -->
-                <video 
-                    id="rutasVideo" 
-                    class="w-100" 
-                    controls 
-                    controlsList="nodownload" 
-                    poster="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" 
-                    style="background-color: #000;"
-                >
-                    <!-- Múltiples fuentes para mayor compatibilidad -->
-                    <source src="emdlmbt.mp4" type="video/mp4">
-                    <!-- Fallback para navegadores antiguos -->
-                    <div class="bg-dark text-white p-3">
-                        Tu navegador no soporta la reproducción de video HTML5.
-                    </div>
+            <!-- Video con HTML básico - solución simplificada -->
+            <div class="mt-4 mb-5">
+                <!-- Opción 1: HTML5 video básico -->
+                <video width="640" height="360" controls>
+                    <source src="./emdlmbt.mp4" type="video/mp4">
+                    Tu navegador no soporta videos HTML5.
                 </video>
-                
-                <!-- Script para asegurar la carga correcta del video -->
-                <script>
-                    document.addEventListener('DOMContentLoaded', function() {
-                        const video = document.getElementById('rutasVideo');
-                        
-                        // Forzar la recarga del video
-                        video.load();
-                        
-                        // Detectar errores en la carga
-                        video.addEventListener('error', function(e) {
-                            console.error('Error al cargar el video:', e);
-                        });
-                        
-                        // Verificar si se han cargado los metadatos
-                        video.addEventListener('loadedmetadata', function() {
-                            console.log('Metadatos del video cargados correctamente');
-                        });
-                    });
-                </script>
+            </div>
+            
+            <!-- Alternativa: si el video de arriba no funciona -->
+            <div class="mt-4">
+                <p class="small text-muted">Si el video no se muestra correctamente, intenta reproducirlo usando este enlace:</p>
+                <a href="emdlmbt.mp4" target="_blank" class="btn btn-primary">Ver video en nueva ventana</a>
             </div>
         </div>
         <div class="row g-4 justify-content-center">
