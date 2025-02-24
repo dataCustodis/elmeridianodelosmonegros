@@ -229,38 +229,12 @@
         <div class="text-center mx-auto mb-5 wow fadeIn" data-wow-delay="0.1s" style="max-width: 700px;">
             <p class="fs-5 text-uppercase text-primary">Rutas Literarias</p>
             <h1 class="display-3">Únete a la Aventura</h1>
-            
-            <!-- Video insertado con controles pero sin autoplay -->
-            <div class="mt-4 mb-5 position-relative">
-                <video 
-                    id="rutasVideo" 
-                    class="w-100" 
-                    controls 
-                    controlsList="nodownload" 
-                    poster="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" 
-                    style="background-color: #000;"
-                    preload="metadata"
-                >
+            <!-- Video insertado aquí -->
+            <div class="mt-4 mb-5">
+                <video width="100%" controls>
                     <source src="emdlmbt.mp4" type="video/mp4">
-                    <div class="bg-dark text-white p-3">
-                        Tu navegador no soporta la reproducción de video HTML5.
-                    </div>
+                    Tu navegador no soporta el elemento de video.
                 </video>
-                
-                <!-- Script para asegurar la carga correcta del video -->
-                <script>
-                    document.addEventListener('DOMContentLoaded', function() {
-                        const video = document.getElementById('rutasVideo');
-                        
-                        // Forzar la recarga del video pero sin reproducción automática
-                        video.load();
-                        
-                        // Detectar errores en la carga
-                        video.addEventListener('error', function(e) {
-                            console.error('Error al cargar el video:', e);
-                        });
-                    });
-                </script>
             </div>
         </div>
         <div class="row g-4 justify-content-center">
